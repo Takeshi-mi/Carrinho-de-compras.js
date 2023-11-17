@@ -1,3 +1,41 @@
 img{
- height: 50px;
+ height: 200px;
+}
+
+
+body{
+    background-color: #f0ad7a;
+}
+
+header{
+    text-align: center;
+    background-color: #52AEBA;
+    padding: 20px 0px;
+    margin-bottom: 12px;
+}
+main{
+    padding: 40px 0px;
+    margin: auto;
+    width: 60%;
+    background-color:#2FE2FA;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+footer {
+    
+    padding: 40px 0px;
+    margin: auto;
+    background-color: #52AEBA;
+    text-align: center;
+    border-radius: 20px;
+}
+table {
+    margin: auto;
+    margin-top: 20px;
+}
+
+table, tr, th, td {
+    padding: 15px;
+    border: 1px solid gray;
 }

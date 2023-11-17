@@ -8,18 +8,44 @@
     <title>Carrinho de compras</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src='js/script.js'></script>
 </head>
 
 <body>
-    <form>
+
+    <header>
+<h1>Carrinho de Compras 🛒</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+        <form id="formulario" >
+            <div class="form-group">
+              <label id="teste" for="txtDescricao">Descrição: </label> <input type="text" class="form-control" id="txtDescricao" placeholder="Descrição do produto">
+            </div>
+            <div class="form-group">
+              <label for="valor">Valor</label><input type="text" class="form-control" id="valor" placeholder="0,00">
+            </div>  
+            <div class="form-group">
+                <label for="qtd">Quantidade</label>
+                <input type="text" class="form-control" placeholder="0" id="qtd">
+              </div>
+          </form>
+    <!--<form>
         <label> Descrição: </label> <input type="text" id="txtDescricao" /><br />
         <label> Valor: </label> <input type="text" id="txtValor" /> <br />
         <label> Quantidade: </label> <input type="text" id="txtQtd" /> <br />
 
     </form>
-    <button onclick="adicionarNaTabela()"> Adicionar</button>
-    <table border="1">
+-->
+    <button type="button" class="btn btn-secundary" onclick="adicionarNaTabela()" > Adicionar</button>
+    <br/>
+    <div class="tabelinha-centro">
+    <table id="tabela">
         <caption>Lista de Compras </caption>
         <thead>
             <tr>
@@ -37,15 +63,21 @@
             <td id="totalCompra" onclick="negrito(this)">0</td>
         </tfoot>
     </table>
+    </div>
     <form>
-        <input type="radio" name="rbPagamento" /><label>Cartão de Crédito</label>
-        <input type="radio" name="rbPagamento" /><label>Dinheiro</label>
+        <input type="radio" name="rbPagamento" value="cartao" onclick="mudarCartao()" /><label>Cartão de Crédito</label>
+        <input type="radio" name="rbPagamento" value="dinheiro" id="dinheiro"  onclick="mudarDinheiro()" /><label>Dinheiro</label>
 
     </form>
-    <img src="img/cifrao.png" alt="cifrão $">
+    <img id="forma" src="img/cifrao.png" alt="cifrão $">
     <p>
-        <button onclick="pagarConta()">Pagar</button>
+        <button class="btn btn-success" onclick="pagarConta()">Pagar</button>
     </p>
+</div>
+</main>
+<footer>
+    Todos os direitos reservados
+</footer>
 </body>
 
 </html>
