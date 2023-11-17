@@ -8,4 +8,4 @@ Caso escolha cartão de crédito, poderá dividir em até 3 vezes sem juros.
 ![image](https://github.com/Takeshi-mi/Carrinho-de-compras.js/assets/101356765/56cddf44-09d3-45f9-8b39-93b1ab26f93a)
 
 
-Acesse o site clicando neste link: 
+Acesse o site clicando neste link: [https://takeshi-mi.github.io/Carrinho-de-compras.js/](https://takeshi-mi.github.io/Carrinho-de-compras.js/)
