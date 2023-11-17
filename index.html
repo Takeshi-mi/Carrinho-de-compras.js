@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Carrinho de compras</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+    <script src='js/script.js'></script>
+</head>
+
+<body>
+    <form>
+        <label> Descrição: </label> <input type="text" id="txtDescricao" /><br />
+        <label> Valor: </label> <input type="text" id="txtValor" /> <br />
+        <label> Quantidade: </label> <input type="text" id="txtQtd" /> <br />
+
+    </form>
+    <button onclick="adicionarNaTabela()"> Adicionar</button>
+    <table border="1">
+        <caption>Lista de Compras </caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>DESCRIÇÃO</th>
+                <th>VALOR</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody id="conteudo">
+            <!--Será preenchido pelo script no js-->
+        </tbody>
+        <tfoot>
+            <td colspan="4">Total</td>
+            <td id="totalCompra" onclick="negrito(this)">0</td>
+        </tfoot>
+    </table>
+    <form>
+        <input type="radio" name="rbPagamento" /><label>Cartão de Crédito</label>
+        <input type="radio" name="rbPagamento" /><label>Dinheiro</label>
+
+    </form>
+    <img src="img/cifrao.png" alt="cifrão $">
+    <p>
+        <button onclick="pagarConta()">Pagar</button>
+    </p>
+</body>
+
+</html>
